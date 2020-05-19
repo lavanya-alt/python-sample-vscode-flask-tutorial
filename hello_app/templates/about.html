@@ -5,8 +5,13 @@ Quality Metrics Definition
 {% block content %}
 <p>Definition of Various Quality Management Metrics</p>
 
-<p>Localization Accuracy</p>
+<b><p>Localization Accuracy</p></b>
 <p>Localization accuracy describes how well an object or a region of interest has been captured with a tool such as a bounding box or a polygon, within the specified pixel tolerance.</p>
+<p>Localization accuracy is evaluated using a metric known as intersection over union (IOU). In a video or an image annotation, IOU is used to evaluate how closely the boundaries of an annotation are aligned to the boundaries of a ground truth bounding box (an annotation which is known to be correct). In Figure 1, the green bounding box represents the ground truth, and the red bounding box represents the box the annotator used to capture the object.
+To calculate IOU, we first find the areas of two regions—the intersection between the annotation and ground truth bounding boxes (the area of overlap) and the sum of the area bound by both boxes (the area of union)</p>
+
+<b><p>Label Accuracy</p></b>
+<p>Accuracy measures the proportion of labeled objects in a data set that are labeled with the correct tag or class</p>
 
 
 
