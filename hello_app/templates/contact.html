@@ -1,7 +1,28 @@
-{% extends "layout.html" %}
-{% block title %}
-Contact us
-{% endblock %}
-{% block content %}
-<p>Contact autonomoussi@tcs.com</p>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+<button class="btn2">Get info id</button>
+<div id="division">
+<p id="paragraph"></p>
+</div>
+<p>{{res}}</p>
+<script>
+$(document).ready(function(){
+
+$(p).hide();
+
+});
+
+$(.btn2).click(function(){
+$(p).show();
+});
+
+</script>
+
+</body>
+</html>
