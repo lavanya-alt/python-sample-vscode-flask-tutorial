@@ -1,6 +1,9 @@
 from datetime import datetime
-from flask import Flask, render_template
+#from flask import Flask, render_template
 from . import app
+from flask import Flask, Response, render_template
+import requests
+import pandas as pd
 
 @app.route("/")
 def home():
