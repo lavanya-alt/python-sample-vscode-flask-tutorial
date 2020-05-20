@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def supervise():
+def contact():
 
 
     auth_token = 'ZowU7fVBiMajzKgwlG5ux6aEVMoL2aLHFhvOeru3uZuaWXvV6IJZNhV7ZRS80icaw16K8hUICZtNNGW6wQjuke3kkb6wtjIxf1DEbob7XIL9TLLJ13Wgc3CVOlaZ3sgv'
