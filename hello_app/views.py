@@ -1,12 +1,6 @@
 from datetime import datetime
-#from flask import Flask, render_template
+from flask import Flask, render_template
 from . import app
-#from hello_app.webapp import app
-from flask import Flask, Response, render_template
-import requests
-import pandas as pd
-
-
 
 @app.route("/")
 def home():
@@ -15,7 +9,6 @@ def home():
 @app.route("/about/")
 def about():
     return render_template("about.html")
-
 
 @app.route("/contact/")
 def contact():
@@ -33,7 +26,3 @@ def hello_there(name = None):
 @app.route("/api/data")
 def get_data():
     return app.send_static_file("data.json")
-
-
-
-
