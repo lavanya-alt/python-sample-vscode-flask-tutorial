@@ -5,6 +5,8 @@ from flask import Flask, Response, render_template
 import requests
 import pandas as pd
 
+app = Flask(__name__)
+
 @app.route("/")
 def home():
     return render_template("home.html")
