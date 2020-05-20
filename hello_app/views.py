@@ -13,11 +13,11 @@ def home():
 def about():
     return render_template("about.html")
 
-@app.route("/contact/")
+#@app.route("/contact/")
 #def contact():
 #    return render_template("contact.html")
 
-#@app.route('/')
+@app.route("/")
 def contact():
     auth_token = '4jIbUl4sRrL8GNN0merp1KESByCrZ5HmSHiwOUEtGWSk5aSZb6sfjM9fVvOQFzIFeAUUTAVi8WHvyFd9g0hBLUOEZumyBXFhH0mUyGVEgrXmCP6UYtCe8ixbJDhuDyOZ'
     header = {"x-api-key": auth_token, 'Content-Type': "application/json"}
