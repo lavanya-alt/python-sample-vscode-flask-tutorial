@@ -7,7 +7,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/home/")
 def home():
     return render_template("home.html")
 
@@ -40,9 +40,7 @@ def contact():
     df = pd.DataFrame(x,columns=['Id'])
     df['Name'] = y
     print(df)
-
-
-    return render_template("contact.html")
+    return render_template("contact.html",tables=[df.to_html(classes='data', header="true")])
 
 
 
