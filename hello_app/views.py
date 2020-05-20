@@ -5,9 +5,9 @@ from flask import Flask, Response, render_template
 import requests
 import pandas as pd
 
-app = Flask(__name__)
 
-@app.route("/home/")
+
+@app.route("/")
 def home():
     return render_template("home.html")
 
@@ -15,13 +15,9 @@ def home():
 def about():
     return render_template("about.html")
 
-#@app.route("/contact/")
-#def contact():
-#    return render_template("contact.html")
-
-@app.route("/")
+@app.route("/contact/")
 def contact():
-    auth_token = '4jIbUl4sRrL8GNN0merp1KESByCrZ5HmSHiwOUEtGWSk5aSZb6sfjM9fVvOQFzIFeAUUTAVi8WHvyFd9g0hBLUOEZumyBXFhH0mUyGVEgrXmCP6UYtCe8ixbJDhuDyOZ'
+   auth_token = '4jIbUl4sRrL8GNN0merp1KESByCrZ5HmSHiwOUEtGWSk5aSZb6sfjM9fVvOQFzIFeAUUTAVi8WHvyFd9g0hBLUOEZumyBXFhH0mUyGVEgrXmCP6UYtCe8ixbJDhuDyOZ'
     header = {"x-api-key": auth_token, 'Content-Type': "application/json"}
 
     project_data = {"workspaceId": 32276}
@@ -41,7 +37,6 @@ def contact():
     df['Name'] = y
     print(df)
     return render_template("contact.html",tables=[df.to_html(classes='data', header="true")])
-
 
 
 @app.route("/hello/")
