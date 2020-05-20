@@ -28,10 +28,9 @@ def supervise():
     print(df)
 
 
-    return render_template("index.html",tables=[df.to_html(classes='data', header="true")])
+    return render_template("contact.html",tables=[df.to_html(classes='data', header="true")])
 
 
 
 
-if __name__ == '__main__':
-    app.run("localhost", 8081)
+
