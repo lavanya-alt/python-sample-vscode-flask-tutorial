@@ -1,6 +1,6 @@
 from datetime import datetime
 #from flask import Flask, render_template
-#from . import app
+from . import app
 from hello_app.webapp import app
 from flask import Flask, Response, render_template
 import requests
@@ -52,3 +52,8 @@ def hello_there(name = None):
 @app.route("/api/data")
 def get_data():
     return app.send_static_file("data.json")
+
+
+
+if _name_ =="_main_":  
+    app.run(debug = True)
