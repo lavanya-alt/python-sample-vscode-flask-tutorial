@@ -1,28 +1,40 @@
-from datetime import datetime
-from flask import Flask, render_template
-from . import app
+from flask import Flask, Response, render_template
+import requests
+#import supervisely_lib as sly
+#import os
+#import numpy as np
+#from matplotlib import pyplot as plt
+#import json
 
-@app.route("/")
-def home():
-    return render_template("home.html")
+# import cv2
 
-@app.route("/about/")
-def about():
-    return render_template("about.html")
+app = Flask(__name__)
 
-@app.route("/contact/")
-def contact():
-    return render_template("contact.html")
 
-@app.route("/hello/")
-@app.route("/hello/<name>")
-def hello_there(name = None):
-    return render_template(
-        "hello_there.html",
-        name=name,
-        date=datetime.now()
-    )
 
-@app.route("/api/data")
-def get_data():
-    return app.send_static_file("data.json")
+@app.route('/')
+def supervise():
+
+
+    auth_token = 'ZowU7fVBiMajzKgwlG5ux6aEVMoL2aLHFhvOeru3uZuaWXvV6IJZNhV7ZRS80icaw16K8hUICZtNNGW6wQjuke3kkb6wtjIxf1DEbob7XIL9TLLJ13Wgc3CVOlaZ3sgv'
+    header = {"x-api-key": auth_token, 'Content-Type': "application/json"}
+
+    workspace_data = {"id": 322955}
+    workspace_url = 'https://app.supervise.ly/public/api/v3/datasets.info'
+    res = requests.get(workspace_url, json=workspace_data, headers=header).json()
+    # # workspace_response=res.get("entities")
+    # # print(workspace_response)
+    # for entity in res["entities"]:
+    #     id = entity["id"]
+    print(res)
+
+    # project_data = {"id": 77276}
+    # project_url = 'https://app.supervise.ly/public/api/v3/projects.stats'
+    # response = requests.get(project_url, json=project_data, headers=header).json()
+    # print(response)
+
+    return render_template("contact.html", res=res)
+
+
+if __name__ == '__main__':
+    app.run("localhost", 8080)
