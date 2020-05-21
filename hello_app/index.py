@@ -5,8 +5,8 @@ import pandas as pd
 app = Flask(__name__)
 
 
-@app.route('/')
-def supervise():
+@app.route('/conatct/ ')
+def conatct():
     auth_token = '4jIbUl4sRrL8GNN0merp1KESByCrZ5HmSHiwOUEtGWSk5aSZb6sfjM9fVvOQFzIFeAUUTAVi8WHvyFd9g0hBLUOEZumyBXFhH0mUyGVEgrXmCP6UYtCe8ixbJDhuDyOZ'
     header = {"x-api-key": auth_token, 'Content-Type': "application/json"}
 
