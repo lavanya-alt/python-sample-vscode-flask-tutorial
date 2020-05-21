@@ -25,9 +25,7 @@ def contact():
         name = entity["name"]
         x.append(id)
         y.append(name)
-    for c, d in zip(x, y):
-        result=('{:>15}     {:<15}'.format(c, d))
-
+   
     df = pd.DataFrame(x,columns=['Id'])
     df['Name'] = y
     print(df)
