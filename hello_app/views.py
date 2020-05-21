@@ -39,7 +39,8 @@ def contact():
     #print(df)
 
 
-    return render_template("contact.html",tables=[df.to_html(classes='data', header="true")])
+    #return render_template("contact.html",tables=[df.to_html(classes='data', header="true")])
+    return render_template("contact.html")
 
 
 
