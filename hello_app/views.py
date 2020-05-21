@@ -25,13 +25,15 @@ def contact():
         name = entity["name"]
         x.append(id)
         y.append(name)
-   
+
     df = pd.DataFrame(x,columns=['Id'])
     df['Name'] = y
-    print(df)
+    #print(df)
 
-    
+
     return render_template("contact.html",tables=[df.to_html(classes='data', header="true")])
+
+
 
     
 
