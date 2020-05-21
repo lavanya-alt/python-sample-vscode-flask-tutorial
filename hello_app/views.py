@@ -10,6 +10,14 @@ def home():
 def about():
     return render_template("about.html")
 
+@app.route("/contact1/")
+def contact1():
+    return render_template("contact1.html")
+
+@app.route("/contact2/")
+def contact2():
+    return render_template("contact2.html")
+
 @app.route("/contact/")
 def contact():
     auth_token = '4jIbUl4sRrL8GNN0merp1KESByCrZ5HmSHiwOUEtGWSk5aSZb6sfjM9fVvOQFzIFeAUUTAVi8WHvyFd9g0hBLUOEZumyBXFhH0mUyGVEgrXmCP6UYtCe8ixbJDhuDyOZ'
