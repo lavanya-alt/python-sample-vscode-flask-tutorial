@@ -18,7 +18,7 @@ def contact1():
 def contact2():
     return render_template("contact2.html")
 
-@app.route("/contact")
+@app.route("/contact/")
 def contact():
     return render_template("contact.html")  
 
