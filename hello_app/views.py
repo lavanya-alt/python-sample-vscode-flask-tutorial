@@ -37,7 +37,7 @@ def contact():
     df = pd.DataFrame(x,columns=['Id'])
     df['Name'] = y
     #print(df)
-    return render_template("contact.html",x=x)
+    return render_template("contact.html")
     
 
 @app.route("/hello/")
