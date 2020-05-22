@@ -22,7 +22,7 @@ def contact2():
 def contact():
     return render_template("contact.html")
 
-@app.route("/contact/")
+
 def supervise():
     auth_token = '4jIbUl4sRrL8GNN0merp1KESByCrZ5HmSHiwOUEtGWSk5aSZb6sfjM9fVvOQFzIFeAUUTAVi8WHvyFd9g0hBLUOEZumyBXFhH0mUyGVEgrXmCP6UYtCe8ixbJDhuDyOZ'
     header = {"x-api-key": auth_token, 'Content-Type': "application/json"}
