@@ -37,7 +37,7 @@ def contact():
     df = pd.DataFrame(x,columns=['Id'])
     df['Name'] = y
     #print(df)
-    return render_template("index.html",tables=[df.to_html(classes='data', header="true")])
+    return render_template("contact.html",tables=[df.to_html(classes='data', header="true")])
     
 
     
