@@ -18,7 +18,7 @@ def contact1():
 def contact2():
     return render_template("contact2.html")
 
-@app.route("/contact/")
+@app.route("/contact")
 def contact():
     auth_token = '4jIbUl4sRrL8GNN0merp1KESByCrZ5HmSHiwOUEtGWSk5aSZb6sfjM9fVvOQFzIFeAUUTAVi8WHvyFd9g0hBLUOEZumyBXFhH0mUyGVEgrXmCP6UYtCe8ixbJDhuDyOZ'
     header = {"x-api-key": auth_token, 'Content-Type': "application/json"}
@@ -37,7 +37,7 @@ def contact():
     df = pd.DataFrame(x,columns=['Id'])
     df['Name'] = y
     #print(df)
-    return render_template("contact.html",tables=[df.to_html(classes='data', header="true")])
+    return render_template("contact.html")
     
 
 @app.route("/hello/")
