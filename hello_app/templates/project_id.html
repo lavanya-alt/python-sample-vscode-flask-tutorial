@@ -13,10 +13,7 @@
 
 </div>
 <p1>
-{% for table in tables %}
-
-            {{ table|safe }}
-{% endfor %}
+    {% block content %}{% endblock %}
 </p1>
 <script>
 $(document).ready(function() {
