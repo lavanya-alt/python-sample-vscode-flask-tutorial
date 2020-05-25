@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<form action="/processform" method="POST">
+   <input type="text" id="textinput" name="text_input">
+   <button class="btn2">Get info id</button>
+</form>
+
+{% for table in tables %}
+
+    {{ table|safe }}
+    {{ titles|safe }}
+
+{% endfor %}
+
+
+<script>
+$(document).ready(function(){
+$("p1").hide();
+});
+$(".btn2").click(function(){
+$("p1").show();
+});
+</script>
+
+
+
+
+</body>
+</html>
