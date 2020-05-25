@@ -20,10 +20,6 @@ def contact2():
 
 @app.route("/contact/")
 def contact():
-    return render_template("contact.html")    
-   
-@app.route('/')
-def callback():
     auth_token = '4jIbUl4sRrL8GNN0merp1KESByCrZ5HmSHiwOUEtGWSk5aSZb6sfjM9fVvOQFzIFeAUUTAVi8WHvyFd9g0hBLUOEZumyBXFhH0mUyGVEgrXmCP6UYtCe8ixbJDhuDyOZ'
     header = {"x-api-key": auth_token, 'Content-Type': "application/json"}
 
@@ -45,7 +41,7 @@ def callback():
     print(df)
 
     return render_template("index_1.html", items=[df.to_html(classes='data', header="true")])
-
+           
 
 @app.route('/processform', methods=["POST"])
 def supervise():
