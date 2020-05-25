@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,30 +9,37 @@
     <link rel="stylesheet" href="{{ url_for('static',filename='css/index_1.css')}}">
 
 </head>
+
 <body style="background-color: white;">
-<img src="static/download.jpg" alt="TATA CONSULTANCY SERVICES" style="width:170px; height:107.5px">
-<div class="flex-container" >
-     <div class="border" >
 
-         <div class="first-div">
-
+    <div class="header">
+        <img src="static/download.jpg" alt="TATA CONSULTANCY SERVICES" style="width:170px; height:107.5px">
+    </div>
+    <div class="flex-container">
+        <div class="left-part">
+        <div class="input-div">
             <div class="button div">
                 <form action="/processform" method="POST">
-                    <input type="text" id="textinput" name="text_input">
-                    <button  class="btn2" id="info-btn" style="font-size:25px">Get info id</button>
+                <input type="number" id="text" name="text">
+                <input type="button" id="info-btn" value="Get info" style="font-size:25px">
                 </form>
             </div>
-
-
-        	<div class="project-div">
-
-		    </div>
-
         </div>
-    <div class="separate-div">
+        <div class="project-div">
+
+
+{% for item in items %}
+
+            {{ item|safe }}
+{% endfor %}
+        </div>
+
+
     </div>
-    <div class="info-box">
-        <div id="meta-data">
+
+        <div class="separate-div"></div>
+        <div class="info-box">
+            <div id="meta-data">
             {% for table in tables %}
                {{ table|safe }}
 
@@ -43,10 +50,8 @@
 
            {% endfor %}
 
-
+        </div>
     </div>
-</div>
-</div>
 <script>
 $(document).ready(function(){
 $("p1").hide();
@@ -55,6 +60,6 @@ $(".btn2").click(function(){
 $("p1").show();
 });
 </script>
-
 </body>
+
 </html>
