@@ -12,7 +12,7 @@ def about():
 
 @app.route("/contact1/")
 def contact1():
-    return render_template("contact1.html")
+    return render_template("home.html")
 
 @app.route("/contact2/")
 def contact2():
