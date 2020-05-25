@@ -12,22 +12,7 @@
 <p id="demo"></p>
 
 </div>
-<p1>
-    {% block content %}{% endblock %}
-</p1>
-<script>
-$(document).ready(function() {
-
-    $("p1").hide();
-});
-
-  $("#show").click(function(){
-    $("p1").show();
-  });
-
-</script>
-
-
+{% block content %}{% endblock %}
 </body>
 </html>
 
