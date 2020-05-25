@@ -29,7 +29,7 @@ def callback():
     df['Name'] = y
     print(df)
 
-    return render_template("index_1.html", items=[df.to_html(classes='data', header="true")])
+    return render_template("contact1.html", items=[df.to_html(classes='data', header="true")])
 
 
 @app.route('/processform', methods=["POST"])
@@ -72,7 +72,7 @@ def supervise():
     print(df_2)
 
 
-    return render_template("index_1.html",items=[df_3.to_html(classes='data', header="true")],tables=[df.to_html(classes='data', header="true")], titles=[df_2.to_html(classes='data', header="true")])
+    return render_template("contact1.html",items=[df_3.to_html(classes='data', header="true")],tables=[df.to_html(classes='data', header="true")], titles=[df_2.to_html(classes='data', header="true")])
 
 
 if __name__ == '__main__':
