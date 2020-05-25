@@ -57,7 +57,7 @@ def contact1():
 
 @app.route("/contact2/")
 def contact2():
-    return render_template("index_1.html")
+    return render_template("contact.html")
 
 @app.route("/contact/")
 def contact():
