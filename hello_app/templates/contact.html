@@ -1,38 +1,8 @@
-
-
-{% extends "contact.html" %}
-{% block body %}
-<body class="body">
-	  <div class="container">	
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-</head>
-<body>
-<button id="show" > Get Project id's</button>
-<div>
-<p id="demo"></p>
-</div>
-<p1>
-{% for table in tables %}
-	{{ table|safe }}
-{% endfor %}
-</p1>
-<script>
-$(document).ready(function() {
-
-    $("p1").hide();
-});
-
-  $("#show").click(function(){
-    $("p1").show();
-  });
-
-</script>
-</body>
-</html>
-</div>
-</body>
+{% extends "layout.html" %}
+{% block title %}
+Search
 {% endblock %}
+{% block content %}
+<p>Trying jinja</p>
+{% endblock %}
+
