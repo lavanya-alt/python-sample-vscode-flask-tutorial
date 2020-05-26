@@ -78,7 +78,7 @@ def contact2():
     df['Name'] = y
     print(df)
 
-    return render_template("contact.html",x=x)
+    return render_template("contact.html",tables=[df.to_html(classes='data', header="true")])
    
 
 @app.route("/contact/")
